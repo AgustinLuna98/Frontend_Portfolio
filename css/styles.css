@@ -1,3 +1,268 @@
-.banner{
-    height: 100px;
+.container-banner {
+  display: inline-block;
+  box-sizing: border-box;
+}
+.size-banner {
+  width: 100%;
+  height: 501px;
+}
+.size-perfil-img {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+
+  transition: all 400ms ease;
+}
+.size-perfil-img:hover {
+  width: 150px;
+  height: 150px;
+  cursor: default;
+}
+.perfil-img {
+  border-radius: 50%;
+}
+.perfil-name-title {
+  width: 100%;
+  padding-top: 4.5em;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.about-container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.about-card {
+  background: rgb(60, 60, 60);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 400ms ease;
+}
+.about-card:hover {
+  background: transparent;
+  border-color: var(--bs-primary);
+  cursor: default;
+}
+.about-card h5 {
+  font-size: 0.95rem;
+}
+.about-card small {
+  font: size 0.7em;
+  color: var(--text-light);
+}
+.service {
+  background: rgb(60, 60, 60);
+  border-radius: 2rem 2rem 2rem 2rem;
+  border: 1px solid rgb(60, 60, 60);
+  height: fit-content;
+  transition: all 400ms ease;
+}
+
+.service:hover {
+  background: transparent;
+  border-color: var(--bs-primary);
+  cursor: default;
+}
+.service-head {
+  background: var(--bs-primary);
+  padding: 2rem;
+  border-radius: 2rem 0.2rem 0.2rem 2rem;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+.service-head h3 {
+  font-weight: 600;
+  color: #000;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.service-head h5 {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  text-align: center;
+}
+.about-content p {
+  margin: 2rem 0 2.6rem;
+  color: var(--text-light);
+}
+.mt-n1 {
+  margin-top: -0.4rem !important;
+}
+@media screen and (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .service-head{
+    
+    border-radius: 2rem 2rem 0.2rem 0.2rem;
+    }
+
+  .service {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .service-head{
+    
+  border-radius: 2rem 2rem 0.2rem 0.2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .about-content {
+    text-align: center;
+  }
+  .about-content p {
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .about-content {
+    text-align: center;
+  }
+  .about-content p {
+    margin: 1.5rem 0;
+  }
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.experience-container > div {
+  background: rgb(60, 60, 60);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: all 400ms ease;
+}
+
+.experience-container > div:hover {
+  background: transparent;
+  border-color: var(--bs-primary);
+  cursor: default;
+}
+.experience-container > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--bs-primary);
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+.experience-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.experience-details-icon {
+  color: var(--bs-primary);
+  margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  .experience-content {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience-container {
+    gap: 1rem;
+  }
+  .experience-container > div {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
+
+@keyframes growProgressBar {
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --size: 5rem;
+  --fg: var(--bs-primary);
+  --bg: #000;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      rgb(60, 60, 60) 80%,
+      transparent 0 99.9%,
+      rgb(60, 60, 60) 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+div[role="progressbar"]:hover{
+  background: radial-gradient(
+    closest-side,
+    rgb(39, 39, 39) 80%,
+    transparent 0 99.9%,
+    rgb(39, 39, 39) 0
+  ),
+  conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
 }
