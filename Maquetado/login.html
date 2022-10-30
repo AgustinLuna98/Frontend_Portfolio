@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <div class="fs-5">Argentina Programa</div>
+          <div class="fs-6">#YoProgramo</div>
+        </div>
+
+        <a href="index.html">
+          <lord-icon
+            src="https://cdn.lordicon.com/twopqjaj.json"
+            trigger="hover"
+            colors="primary:#ec00ad,secondary:#ec00ad,tertiary:#ec00ad,quaternary:#ec00ad,quinary:#ec00ad,senary:#ec00ad,septenary:#000000"
+            style="width: 60px; height: 60px"
+          >
+          </lord-icon>
+        </a>
+      </div>
+    </nav>
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="height: 35rem"
+    >
+      <div>
+        <div
+          class="card card-body justify-content-center text-center border-1 border-primary"
+          style="width: 20rem; height: 20rem"
+        >
+          <form
+            action=""
+            class="needs-validation w-100"
+            novalidate
+            method="POST"
+          >
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="form-label"
+                >User</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="User"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="pt-3">
+              <input
+                type="submit"
+                name="save_obra"
+                class="btn btn-primary btn-block"
+                value="Iniciar sesion"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.esm.min.js"></script>
+  </body>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      "use strict";
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll(".needs-validation");
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach((form) => {
+        form.addEventListener(
+          "submit",
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+  </script>
+</html>
+<!DOCTYPE html>
